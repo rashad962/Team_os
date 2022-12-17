@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fgyytby
+spec:
+  selector: 
+    matchLabels:
+      app: rashed
+  replicas: 3
+  template: 
+    metadata:
+      name: my-first-pod
+      labels: 
+        app: rashed
+    spec:          
+      containers:
+        - image: nginx:alpine
+          name: nginx-container
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "1"
+            requests:
+              memory: "512Mi"
