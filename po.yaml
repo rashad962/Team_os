@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fgyytby
+  name: project
 spec:
   selector: 
     matchLabels:
