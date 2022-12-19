@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: project
+  name: proj
 spec:
   selector: 
     matchLabels:
@@ -14,8 +14,8 @@ spec:
         app: rashed
     spec:          
       containers:
-        - image: nginx:alpine
-          name: nginx-container
+        - image: rashed978/project
+          name: project-container
           imagePullPolicy: IfNotPresent
           resources:
             limits:
