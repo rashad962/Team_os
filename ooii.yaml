@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
-  name: proj
+  name: oo
+
+
 spec:
-  selector: 
+  selector:
     matchLabels:
-      app: rashed
+      app: m
   replicas: 3
   template: 
     metadata:
-      name: my-first-pod
-      labels: 
-        app: rashed
-    spec:          
+      name: dep1
+      labels:
+        app: m
+    spec:
       containers:
         - image: rashed978/project
           name: project-container
-          imagePullPolicy: IfNotPresent
           resources:
             limits:
               memory: "512Mi"
               cpu: "1"
-            requests:
-              memory: "512Mi"
